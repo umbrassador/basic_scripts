@@ -1,0 +1,1 @@
+nmap -sC -sV --open -Pn $1 -oA Pentest/Scans/Nmap/top-1000 -vv
