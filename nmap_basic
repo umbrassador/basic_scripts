@@ -1,1 +1,11 @@
-nmap -sC -sV --open -Pn $1 -oA Pentest/Scans/Nmap/top-1000 -vv
+#!/bin/bash
+
+if [ $1 == "ext" ];then
+
+	nmap -sC -sV --open -Pn -iL $2 -oA Pentest/External/Scans/Nmap/tcp-top-1000 -vv
+
+fi
+if [ $1 == "int" ];then
+	
+	nmap -sC -sV --open -Pn -iL $2 -oA Pentest/Internal/Scans/Nmap/tcp-top-1000 -vv
+fi
